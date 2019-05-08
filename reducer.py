@@ -6,6 +6,12 @@ import h5py
 import numpy as np
 from collections import Counter
 
+'''
+This file is used to change words to their respective indices according to a pre-loaded dictionary,
+truncate or pad each sentence to make it a pre-specified fixed length (100), 
+remove duplicates and keep the mode of ratings and map ratings to binary sentiment indicator.
+'''
+
 with open('vocab_10000.json') as f:
     vocab_dict = json.load(f)
     f.close()
